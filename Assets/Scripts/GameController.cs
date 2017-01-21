@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-    public GUIText scoreText;
-    public int score;
+    public Text scoreText;
+    private int score;
 
-	// Use this for initialization
 	void Start () {
         score = 0;
         updateScore();
@@ -18,9 +18,9 @@ public class GameController : MonoBehaviour {
 		
 	}
 
-    public void addScore(int newScoreValue)
+    public void addScore()
     {
-        score += newScoreValue;
+        score += 1;
         updateScore();
     }
 
