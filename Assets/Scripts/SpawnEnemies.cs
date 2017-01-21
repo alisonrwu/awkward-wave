@@ -19,8 +19,6 @@ public class SpawnEnemies : MonoBehaviour {
 
     void spawnEnemies()
     {
-        //enemy = GameObject.Find("Red");
-        //Instantiate(enemy, new Vector3(12, -3, 0), Quaternion.identity);
         Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length)], new Vector3(12, -3, 0), Quaternion.identity);
     }
 }
