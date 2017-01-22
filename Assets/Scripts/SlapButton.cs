@@ -23,7 +23,8 @@ public class SlapButton : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) ||
+            Input.GetKey("s"))
         {
             Clicked();
         }
@@ -44,11 +45,13 @@ public class SlapButton : MonoBehaviour
             {
                 Debug.Log("slapped");
                 ac.gc.addScore(3);
+                target.GetComponent<RunningLeft>().happy = true;
             }
             else
             {
                 Debug.Log("awks");
                 ac.lowerAwkwardHealth(); //not working
+                target.GetComponent<RunningLeft>().happy = true;
             }
         }
 

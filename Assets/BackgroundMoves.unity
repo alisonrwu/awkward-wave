@@ -1336,6 +1336,8 @@ GameObject:
   - component: {fileID: 1735063784}
   - component: {fileID: 1735063783}
   - component: {fileID: 1735063782}
+  - component: {fileID: 1735063785}
+  - component: {fileID: 1735063786}
   m_Layer: 5
   m_Name: Wave
   m_TagString: Action
@@ -1447,6 +1449,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1735063780}
+--- !u!114 &1735063785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735063780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52dbe4a9d0fe5c45b19d6f66745d929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1735063782}
+--- !u!114 &1735063786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1735063780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabe856019641af439054717d9ba729e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 0}
+  scoreValue: 1
+  self: {fileID: 0}
+  sight: {fileID: 0}
+  target: {fileID: 0}
+  walker: {fileID: 0}
 --- !u!1 &1768100996
 GameObject:
   m_ObjectHideFlags: 0

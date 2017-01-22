@@ -22,7 +22,8 @@ public class hfButton : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) ||
+            Input.GetKey("d"))
         {
             Clicked();
         }
@@ -53,6 +54,7 @@ public class hfButton : MonoBehaviour {
             {
                 Debug.Log("awks");
                 ac.lowerAwkwardHealth(); //not working?
+                target.GetComponent<RunningLeft>().happy = true;
             }
         }
     }
