@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class SlapButton : MonoBehaviour
 {
-    private Button button;
-    public GameObject angry;
-
-    //public AwkwardController ac;
+    public Button button;
+    GameObject target;
+    AwkwardController ac;
 
     void Awake()
     {
         button = GetComponent<Button>();
+        ac = GetComponent<AwkwardController>();
     }
     // Use this for initialization
     void Start()
@@ -23,15 +23,25 @@ public class SlapButton : MonoBehaviour
 
     void Clicked()
     {
-        angry = GameObject.FindGameObjectWithTag("Angry").transform.parent.gameObject;
-        if (angry = GameObject.FindGameObjectWithTag("Angry").transform.parent.gameObject)
+        Physics.gravity = new Vector3(0, -50, 0);
+        target = ac.FindClosestWalker();
+        if (target && ac.getCanHF() && !ac.getHappy())
         {
-            angry.transform.Translate(Vector3.down);
-            //ac.increaseScore();
-        }
-        else
-        {
-            //ac.lowerAwkwardHealth();
+            target.AddComponent<Rigidbody2D>();
+            target.transform.Translate(new Vector3(2, 1, 0));
+            //target.transform.Translate(Vector3.down * 2);
+            target.transform.Rotate(Vector3.forward * -60);
+
+            if (target.transform.Find("Tag2").gameObject.tag == "Angry")
+            {
+                Debug.Log("slapped");
+                ac.gc.addScore(3);
+            }
+            else
+            {
+                Debug.Log("awks");
+                ac.lowerAwkwardHealth(); //not working
+            }
         }
 
     }

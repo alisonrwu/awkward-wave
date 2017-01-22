@@ -13,6 +13,7 @@ public class AwkwardController : MonoBehaviour {
 
     public GameObject self;
     public ActionLogic sight;
+    public GameObject target;
     public RunningLeft walker;
 
     void Awake()
@@ -21,7 +22,6 @@ public class AwkwardController : MonoBehaviour {
     }
 
 	void Start () {
-        //   AwkwardBar = GameObject.Find("HealthCamera").transform.FindChild("AwkCanvas").FindChild("AwkwardBar").GetComponent<Image>(); 	
         AwkwardBar = GetComponent<Image>();
         tmpHealth = 1f;
 
@@ -63,6 +63,7 @@ public class AwkwardController : MonoBehaviour {
         {
             tmpHealth -= 0.1f;
             updateBar();
+            Debug.Log("lower awk bar");
         }
     }
 
@@ -98,7 +99,7 @@ public class AwkwardController : MonoBehaviour {
     }
 
     // Find the name of the closest walker
-    GameObject FindClosestWalker()
+    public GameObject FindClosestWalker()
     {
         GameObject[] gos;
         gos = GameObject.FindGameObjectsWithTag("Walker");
@@ -121,6 +122,20 @@ public class AwkwardController : MonoBehaviour {
             }
         }
         return closest;
+    }
+
+
+    public bool getCanWave()
+    {
+        return sight.canWave;
+    }
+    public bool getCanHF()
+    {
+        return sight.canHF;
+    }
+    public bool getHappy()
+    {
+        return walker.happy;
     }
 
 }
