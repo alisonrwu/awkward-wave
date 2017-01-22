@@ -5,11 +5,13 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour {
     public GameObject[] enemies; 
     //public GameObject enemy;
-    public float spawnTime = 5f;
+    public float spawnTime = 0.5f;
+    public float spawnRepeat;  
 
     // Use this for initialization
     void Start () {
-        InvokeRepeating("spawnEnemies", spawnTime, spawnTime);
+        spawnRepeat = Random.Range(0.5f, 5.0f); 
+        InvokeRepeating("spawnEnemies", spawnTime, spawnRepeat);
     }
 
     void spawnEnemies()
