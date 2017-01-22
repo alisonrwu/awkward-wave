@@ -10,17 +10,17 @@ public class Despawn : MonoBehaviour {
 
     void Awake()
     {
-        rl = this.GetComponent<RunningLeft>();
-        ac = GetComponent<AwkwardController>();
+        //rl = this.GetComponent<RunningLeft>();
+        //ac = GetComponent<AwkwardController>();
     }
 
     void OnBecameInvisible()
     {
-        if (!rl.happy)
-        {
-            Debug.Log("missed a person");
-            ac.lowerAwkwardHealth();
-        }
+        //if (!rl.happy)
+        //{
+        //    Debug.Log("missed a person");
+        //    ac.lowerAwkwardHealth();
+        //}
         Destroy(gameObject);
     }
 

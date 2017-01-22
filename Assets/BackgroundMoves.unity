@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 173323314}
-  scoreValue: 0
+  scoreValue: 1
   self: {fileID: 0}
   sight: {fileID: 0}
   target: {fileID: 0}
@@ -363,7 +363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &173323314
 MonoBehaviour:
@@ -536,7 +536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637143820
 GameObject:
@@ -626,7 +626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953708284
 GameObject:
@@ -713,6 +713,8 @@ GameObject:
   - component: {fileID: 983066904}
   - component: {fileID: 983066903}
   - component: {fileID: 983066902}
+  - component: {fileID: 983066905}
+  - component: {fileID: 983066906}
   m_Layer: 5
   m_Name: HighFive
   m_TagString: Action
@@ -778,7 +780,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24314927}
+      - m_Target: {fileID: 0}
         m_MethodName: hfClick
         m_Mode: 1
         m_Arguments:
@@ -788,7 +790,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &983066903
@@ -824,6 +826,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983066900}
+--- !u!114 &983066905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 983066900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bbb3e527a3578941b4775095f3d71f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 983066902}
+--- !u!114 &983066906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 983066900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabe856019641af439054717d9ba729e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 173323314}
+  scoreValue: 1
+  self: {fileID: 0}
+  sight: {fileID: 0}
+  target: {fileID: 0}
+  walker: {fileID: 0}
 --- !u!1 &1000866089
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +940,7 @@ Transform:
   - {fileID: 1703905092}
   - {fileID: 1768100997}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1000866093
 MonoBehaviour:
@@ -927,6 +958,48 @@ MonoBehaviour:
   canHF: 0
   waveRangeEnd: {fileID: 1768100997}
   canWave: 0
+--- !u!1001 &1155567503
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.4297392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622034978472784, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1376246242
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +1061,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1461885927
 GameObject:
@@ -1328,7 +1401,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24314927}
+      - m_Target: {fileID: 0}
         m_MethodName: waveClick
         m_Mode: 1
         m_Arguments:
@@ -1480,7 +1553,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24314927}
+      - m_Target: {fileID: 0}
         m_MethodName: lowerAwkwardHealth
         m_Mode: 1
         m_Arguments:
@@ -1554,7 +1627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3242c59f45cf444f9125ae4be2a782a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 1771968928}
 --- !u!1 &1873993173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1719,7 @@ RectTransform:
   - {fileID: 1771968927}
   - {fileID: 983066901}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
