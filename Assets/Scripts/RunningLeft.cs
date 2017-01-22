@@ -15,5 +15,4 @@ public class RunningLeft : MonoBehaviour {
         this.transform.position = position;
     }
 
-
 }
