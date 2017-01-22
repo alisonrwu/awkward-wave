@@ -21,6 +21,14 @@ public class SlapButton : MonoBehaviour
         button.onClick.AddListener(() => Clicked());
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            Clicked();
+        }
+    }
+
     void Clicked()
     {
         Physics.gravity = new Vector3(0, -50, 0);
