@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Image = UnityEngine.UI.Image;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AwkwardController : MonoBehaviour {
     Image AwkwardBar;
@@ -37,9 +38,17 @@ public class AwkwardController : MonoBehaviour {
 
     public void lowerAwkwardHealth()
     {
-        tmpHealth -= 0.1f;
-        updateBar();
+        if (tmpHealth <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            tmpHealth -= 0.1f;
+            updateBar();
+        }
     }
+
 
     public void waveClick()
     {
