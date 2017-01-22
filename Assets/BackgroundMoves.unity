@@ -695,7 +695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HighFive
+  m_Text: Clap
 --- !u!222 &953708287
 CanvasRenderer:
   m_ObjectHideFlags: 0

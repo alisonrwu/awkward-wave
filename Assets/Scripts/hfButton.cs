@@ -20,6 +20,14 @@ public class hfButton : MonoBehaviour {
         button.onClick.AddListener(() => Clicked());
     }
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Clicked();
+        }
+    }
+
     void Clicked()
     {
         //Physics.gravity = new Vector3(0, 50, 0);
