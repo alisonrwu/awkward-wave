@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AwkwardController : MonoBehaviour {
-    static Image AwkwardBar;
+    Image AwkwardBar;
     static float tmpHealth;
 
     public GameController gc;
@@ -46,6 +46,7 @@ public class AwkwardController : MonoBehaviour {
             //Debug.Log("found closest walker");
             walker = FindClosestWalker().GetComponent<RunningLeft>();
         }
+        updateBar(); 
     }
 
     void updateBar()
@@ -55,7 +56,7 @@ public class AwkwardController : MonoBehaviour {
 
     public void lowerAwkwardHealth()
     {
-        if (tmpHealth <= 0)
+        if (tmpHealth <= 0.1)
         {
             SceneManager.LoadScene("GameOver");
         }

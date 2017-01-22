@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabe856019641af439054717d9ba729e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gc: {fileID: 0}
+  gc: {fileID: 173323314}
   scoreValue: 1
   self: {fileID: 0}
   sight: {fileID: 0}
