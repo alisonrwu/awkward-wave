@@ -37,8 +37,9 @@ public class WaveButton : MonoBehaviour {
         {
             target.AddComponent<Rigidbody2D>();
             target.transform.Translate(Vector3.up);
-            //target.transform.Rotate(Vector3.up * Time.deltaTime, Space.World);
             Invoke("destroyRB", 0.45f);
+            target.GetComponent<SpriteRenderer>().flipX = true;
+            Invoke("flipBack", 0.1f);
 
             if (target.transform.Find("Tag2").gameObject.tag == "WaveTo")
             {
@@ -58,9 +59,12 @@ public class WaveButton : MonoBehaviour {
             }
         }
     }
-
     private void destroyRB()
     {
         Destroy(target.GetComponent<Rigidbody2D>());
+    }
+    private void flipBack()
+    {
+        target.GetComponent<SpriteRenderer>().flipX = false;
     }
 }
