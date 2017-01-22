@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AwkwardController : MonoBehaviour {
-    Image AwkwardBar;
-    float tmpHealth;
+    static Image AwkwardBar;
+    static float tmpHealth;
 
     public GameController gc;
     public int scoreValue = 1;
@@ -63,7 +63,7 @@ public class AwkwardController : MonoBehaviour {
         {
             tmpHealth -= 0.1f;
             updateBar();
-            Debug.Log("lower awk bar");
+            Debug.Log("lower awk bar to " + tmpHealth);
         }
     }
 

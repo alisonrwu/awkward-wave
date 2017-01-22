@@ -8,6 +8,9 @@ TagManager:
   - Button
   - Action
   - Score
+  - Angry
+  - HFme
+  - WaveTo
   layers:
   - Default
   - TransparentFX
