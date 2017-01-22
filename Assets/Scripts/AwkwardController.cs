@@ -10,6 +10,8 @@ public class AwkwardController : MonoBehaviour {
     public GameController gc;
     public int scoreValue = 1;
 
+    public ActionLogic sight;
+
 	void Start () {
         //   AwkwardBar = GameObject.Find("HealthCamera").transform.FindChild("AwkCanvas").FindChild("AwkwardBar").GetComponent<Image>(); 	
         AwkwardBar = GetComponent<Image>();
@@ -24,17 +26,13 @@ public class AwkwardController : MonoBehaviour {
         {
             Debug.Log("Cannot find GameController script!");
         }
+
+        sight = GameObject.FindGameObjectWithTag("Player").GetComponent<ActionLogic>();
     }
 
     void updateBar()
     {
         AwkwardBar.fillAmount = tmpHealth;
-    }
-
-    public void changeAwkwardHealth()
-    {
-        tmpHealth = Random.Range(0f, 1f);
-        updateBar();
     }
 
     public void lowerAwkwardHealth()
@@ -43,8 +41,24 @@ public class AwkwardController : MonoBehaviour {
         updateBar();
     }
 
+    public void waveClick()
+    {
+        if (sight.canWave)
+        {
+            gc.addScore(1);
+        }
+    }
+
+    public void hfClick()
+    {
+        if (sight.canHF)
+        {
+            gc.addScore(5);
+        }
+    }
+
     public void increaseScore()
     {
-        gc.addScore();
+        gc.addScore(1);
     }
 }

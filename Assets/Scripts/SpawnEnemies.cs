@@ -12,11 +12,6 @@ public class SpawnEnemies : MonoBehaviour {
         InvokeRepeating("spawnEnemies", spawnTime, spawnTime);
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
-
     void spawnEnemies()
     {
         Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length)], new Vector3(12, -3, 0), Quaternion.identity);

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95239318005647308}
   - component: {fileID: 114064734888328550}
   - component: {fileID: 114468312585642514}
+  - component: {fileID: 61278272514966636}
   m_Layer: 0
   m_Name: Doraemon
   m_TagString: Walker
@@ -43,6 +44,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61278272514966636
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1838529118666254}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.27, y: 2.57}
 --- !u!95 &95239318005647308
 Animator:
   serializedVersion: 3

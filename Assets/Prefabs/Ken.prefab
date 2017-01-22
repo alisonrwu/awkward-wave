@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95328383556977286}
   - component: {fileID: 114279496594042176}
   - component: {fileID: 114970735044325896}
+  - component: {fileID: 61617835098931986}
   m_Layer: 0
   m_Name: Ken
   m_TagString: Walker
@@ -43,6 +44,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61617835098931986
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470309644562458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.71999997, y: 0.87999994}
 --- !u!95 &95328383556977286
 Animator:
   serializedVersion: 3
