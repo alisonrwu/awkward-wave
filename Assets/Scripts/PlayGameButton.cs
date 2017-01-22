@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class startButton : MonoBehaviour {
+public class PlayGameButton : MonoBehaviour {
+
     public Button button;
-    public string sceneName; 
+    public string sceneName;
 
     // Use this for initialization
     void Awake()
@@ -19,20 +20,15 @@ public class startButton : MonoBehaviour {
         button.onClick.AddListener(() => Clicked());
     }
 
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
-    void Clicked() {
-        SceneManager.LoadScene("Tutorial");
-    }
 
-    void ClickedScene(string sceneName)
+    void Clicked()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("BackgroundMoves");
     }
-
-
-
 }
