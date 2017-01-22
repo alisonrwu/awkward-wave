@@ -11,7 +11,6 @@ public class SlapButton : MonoBehaviour
 
     //public AwkwardController ac;
 
-
     void Awake()
     {
         button = GetComponent<Button>();
@@ -20,13 +19,12 @@ public class SlapButton : MonoBehaviour
     void Start()
     {
         button.onClick.AddListener(() => Clicked());
-
     }
 
     void Clicked()
     {
-        angry = GameObject.Find("Angry");
-        if (angry = GameObject.FindGameObjectWithTag("Angry"))
+        angry = GameObject.FindGameObjectWithTag("Angry").transform.parent.gameObject;
+        if (angry = GameObject.FindGameObjectWithTag("Angry").transform.parent.gameObject)
         {
             angry.transform.Translate(Vector3.down);
             //ac.increaseScore();
@@ -37,12 +35,5 @@ public class SlapButton : MonoBehaviour
         }
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
 }

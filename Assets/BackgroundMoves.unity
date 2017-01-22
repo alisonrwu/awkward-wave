@@ -241,7 +241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gc: {fileID: 0}
   scoreValue: 0
+  self: {fileID: 0}
   sight: {fileID: 0}
+  walker: {fileID: 0}
 --- !u!1 &147730006
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 1838529118666254, guid: 15677fd727494b347bdec1df70a2f113, type: 2}
-  - {fileID: 1470309644562458, guid: d50aa89d02f280e4a81e7bdbb415546a, type: 2}
+  - {fileID: 1054374431686674, guid: d50aa89d02f280e4a81e7bdbb415546a, type: 2}
   - {fileID: 1832399577832844, guid: 6dde5c58d49b3924aabcbf5b719920ec, type: 2}
   spawnTime: 5
 --- !u!4 &173323313
@@ -645,7 +647,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gc: {fileID: 0}
   scoreValue: 0
+  self: {fileID: 0}
   sight: {fileID: 0}
+  walker: {fileID: 0}
 --- !u!1 &758303465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,8 +1302,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1679051437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: 0}
-  m_LocalScale: {x: 23.136265, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 23, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1729,7 +1733,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gc: {fileID: 0}
   scoreValue: 0
+  self: {fileID: 0}
   sight: {fileID: 0}
+  walker: {fileID: 0}
 --- !u!1 &1886846571
 GameObject:
   m_ObjectHideFlags: 0
